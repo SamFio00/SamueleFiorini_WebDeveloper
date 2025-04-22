@@ -3,8 +3,16 @@
     grid-template-columns: 1fr;
     gap: 40px;
     margin: 50px 0;
-  }
+
+    @media (max-width: 768px) {
+      padding: 20px;
+    }
   
+  h1 {
+    color: rgb(0, 0, 0);
+    font-size: 55px;  
+    text-align: center;          
+  }
   .card {
     background-color: #ffffff; 
     border: 1px solid rgb(177, 62, 62);
@@ -20,18 +28,18 @@
   
     .card-body {
       padding: 20px;
-      color: #333; 
+      color: #ffffff; 
     }
   
     .card-title {
       font-size: 28px;
-      color: #000; 
+      color: rgb(0, 0, 0); 
       font-weight: bold;
     }
   
     .card-subtitle {
       font-size: 20px;
-      color: rgb(177, 62, 62); 
+      color: rgb(0, 0, 0); 
       margin-bottom: 10px;
     }
   
@@ -57,4 +65,6 @@
       }
     }
   }
+
+}
   

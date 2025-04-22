@@ -38,12 +38,12 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 70px;
+  margin-top: 50px;
   width: 100%;
 }
 @media (max-width: 768px) {
   main {
-    margin-top: 0;
+    margin-top: 10px;
   }
 }
 
@@ -264,8 +264,17 @@ footer p {
   gap: 40px;
   margin: 50px 0;
 }
-
-.card {
+@media (max-width: 768px) {
+  .container-projects {
+    padding: 20px;
+  }
+}
+.container-projects h1 {
+  color: rgb(0, 0, 0);
+  font-size: 55px;
+  text-align: center;
+}
+.container-projects .card {
   background-color: #ffffff;
   border: 1px solid rgb(177, 62, 62);
   border-radius: 15px;
@@ -273,30 +282,30 @@ footer p {
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.card:hover {
+.container-projects .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
-.card .card-body {
+.container-projects .card .card-body {
   padding: 20px;
-  color: #333;
+  color: #ffffff;
 }
-.card .card-title {
+.container-projects .card .card-title {
   font-size: 28px;
-  color: #000;
+  color: rgb(0, 0, 0);
   font-weight: bold;
 }
-.card .card-subtitle {
+.container-projects .card .card-subtitle {
   font-size: 20px;
-  color: rgb(177, 62, 62);
+  color: rgb(0, 0, 0);
   margin-bottom: 10px;
 }
-.card .card-text {
+.container-projects .card .card-text {
   font-size: 18px;
   color: #666;
   margin-bottom: 20px;
 }
-.card .card-link {
+.container-projects .card .card-link {
   font-size: 16px;
   text-decoration: none;
   color: #ffffff;
@@ -306,7 +315,7 @@ footer p {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
   transition: all 0.3s ease-in-out;
 }
-.card .card-link:hover {
+.container-projects .card .card-link:hover {
   background-color: rgb(177, 62, 62);
   color: #ffffff;
 }
@@ -326,6 +335,7 @@ footer p {
 }
 @media (max-width: 768px) {
   .contact {
+    color: rgb(177, 62, 62);
     border: none;
     border-radius: 0;
     box-shadow: none;
