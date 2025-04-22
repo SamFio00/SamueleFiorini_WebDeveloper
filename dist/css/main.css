@@ -35,6 +35,16 @@ header {
 
 main {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 70px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  main {
+    margin-top: 0;
+  }
 }
 
 .navbar {
@@ -307,13 +317,22 @@ footer p {
   border-radius: 20px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   margin-bottom: 100px;
   padding: 50px;
   width: 75%;
   color: #000000;
   text-align: center;
+}
+@media (max-width: 768px) {
+  .contact {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 20px;
+    width: 100%;
+    margin: 0;
+  }
 }
 .contact h2 {
   font-size: 55px;
@@ -337,11 +356,6 @@ footer p {
 }
 
 main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 70px;
-  width: 100%;
   opacity: 0;
   animation: show 1s ease-in-out 1s forwards;
 }
