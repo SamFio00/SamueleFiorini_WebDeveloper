@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="dist/css/main.css">
+    <link rel="icon" href="dist/img/favicon.ico">
+    <title>Contattami</title>
+</head>
+<body>
+   <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          SF &copy;
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">Chi Sono</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  href="projects.html">Progetti</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Contattami</a>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+   </header>
+
+
+       <main>
+        <h1>Contattami</h1>
+
+        <section class="contact">
+            <h2>Contattami</h2>
+            <div class="container mt-5">
+                <form id="contact-form">
+                    <div class="mb-4">
+                      <label for="nome" class="form-label">Nome</label>
+                      <input type="text" class="form-control" id="nome" name="nome" placeholder="Inserisci il tuo nome" required>
+                    </div>
+                    <div class="mb-4">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="email" name="email" placeholder="Inserisci la tua email" required>
+                    </div>
+                    <div class="mb-4">
+                      <label for="messaggio" class="form-label">Messaggio</label>
+                      <textarea class="form-control" id="messaggio" name="messaggio" rows="3" placeholder="Scrivi il tuo messaggio" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Invia</button>
+                  </form>
+                  
+          </div>
+          </section>
+
+       </main>
+
+       <footer>
+        <ul>
+          <li>
+            <a href="https://www.instagram.com/sam_00_f" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/SamFio00" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/samuele-fiorini-38bba9325" target="_blank">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </li>
+        </ul>
+        <p>&copy; 2025 Samuele Fiorini. Tutti i diritti riservati.</p>
+      </footer>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+      
+
+      <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+      <script>
+        (function () {
+          emailjs.init("Y8tCBiVn2O1pqjnQX"); 
+        })();
+      
+        document.getElementById("contact-form").addEventListener("submit", function (e) {
+          e.preventDefault();
+      
+          emailjs.sendForm("service_cd46j4f", "template_g4drlvg", this)
+            .then(function () {
+              alert("Messaggio inviato con successo!");
+              document.getElementById("contact-form").reset();
+            }, function (error) {
+              alert("Errore durante l'invio, riprova.");
+              console.error("Errore:", error);
+            });
+        });
+      </script>
+      
+
+   
+    </header>
+</body>
+</html>
